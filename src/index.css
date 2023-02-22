@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif, 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e9e9e9;
+  color: black;
+  font-weight:400;
+  font-size: 16px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-size:2rem;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  font-size:1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+
+h3{
+  font-size:1.25rem ;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+h4{
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+h5{
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h6{
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+}
+
+p > span {
+  display: inline-block;
+}
+
+a{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+img{
+  /* padding-top: 1.5rem; */
+}

@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "バックエンドの部分。 なぜここに作るか。 XSERVERはこのpublic_html直下のディレクトリをサブドメインとして認識するから。同ドメイン内である理由は、好奇心。 エックスサーバーがポートを制限しており、同ドメイン別ディレクトリにサーバーを立てることができても、htaccessを通らなければportを移動できず、POSTによるバックエンド処理を行えないため。GmailAPIの使用を断念。",
+  "main": "mailSakuraeng.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kouki Fukuda",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "forever": "^4.0.3",
+    "nodemailer": "^6.8.0"
+  }
+}
