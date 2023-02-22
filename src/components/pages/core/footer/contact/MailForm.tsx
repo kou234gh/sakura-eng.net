@@ -28,18 +28,23 @@ export const MailForm = () => {
 
     // const response = await fetch("https://api.sakura-eng.net", {
     // ↑2023/02/21削除代入いらない（？）
-    await fetch("https://api.sakura-eng.net", {
+    const response = await fetch("https://api.sakura-eng.net", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
       body: JSON.stringify({ mailerState }),
     })
-      .then((res) => res.json())
+      .then((res: any) => {
+        res.json();
+        console.log("40行目")
+      })
       .then(async (res) => {
-        const resData = await res;
+        console.log("43行目")
+        const resData: any = await res;
         console.log(resData);
-        console.log(JSON.stringify({ mailerState }));
+        console.log("46行目")
+        // console.log(JSON.stringify({ mailerState }));
         if (resData.status === "success") {
           alert("メッセージが送信されました。");
         } else if (resData.status === "fail") {
@@ -55,6 +60,10 @@ export const MailForm = () => {
           tel: "",
           message: "",
         });
+      })
+      .catch((error)=>{
+        alert("現在メッセージの送信ができない状況でございます。お電話等をご利用ください。");
+        console.log(error);
       });
   };
 
@@ -149,7 +158,7 @@ export const MailForm = () => {
               value={mailerState.message}
             />
           </label>
-          
+
           {/* <button className="relative max-w-max inline-flex items-center justify-center p-0.5 mt-0 mb-8 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-sb-200 to-sb-400 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200" type="submit">
             <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-[#ffffff] dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">上記の内容で送信する</span>
           </button> */}

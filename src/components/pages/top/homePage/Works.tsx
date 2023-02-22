@@ -28,12 +28,8 @@ export const Works = () => {
         </div>
       </div>
       <div className='grid grid-cols-1 mt-[1.5rem] mb-[1.5rem]'>
-        <div className='flex flex-rows gap-10'>
-          <a href="https://github.com/kou234gh"><img width={"40px"} height={"40px"} src={icons.github} alt="github" title="GitHub" /></a>
-          <a href="https://twitter.com/kou234t"><img width={"40px"} height={"40px"} src={icons.twitter} alt="twitter" title="twitter" /></a>
-        </div>
         <h3>フロントエンド</h3>
-        <div className='flex flex-rows gap-5 flex-wrap justify-evenly'>
+        <div className='flex flex-rows gap-8 flex-wrap items-center justify-center'>
           <img width={"32px"} height={"32px"} src={icons.css3} alt="css3" title="css3" />
           <img width={"32px"} height={"32px"} src={icons.html5} alt="html5" title="html5" />
           <img width={"32px"} height={"32px"} src={icons.js} alt="js" title="javascript" />
@@ -49,7 +45,7 @@ export const Works = () => {
       </div>
       <div className='grid grid-cols-1 mt-[1.5rem] mb-[1.5rem]'>
         <h3>バックエンド</h3>
-        <div className='flex flex-rows gap-5 flex-wrap justify-evenly'>
+        <div className='flex flex-rows gap-8 flex-wrap items-center justify-center'>
 
           <img width={"32px"} height={"32px"} src={icons.node} alt="node" title="nodejs" />
           <img width={"32px"} height={"32px"} src={icons.java} alt="java" title="Java" />
@@ -58,7 +54,7 @@ export const Works = () => {
       </div>
       <div className='grid grid-cols-1 mt-[1.5rem] mb-[1.5rem]'>
         <h3>ツール</h3>
-        <div className='flex flex-rows gap-5 flex-wrap justify-evenly'>
+        <div className='flex flex-rows gap-8 flex-wrap items-center justify-center'>
           <img width={"32px"} height={"32px"} src={icons.linux} alt="linux" title="Linux" />
           <img width={"32px"} height={"32px"} src={icons.windows} alt="windows" title="Windows" />
           <img width={"32px"} height={"32px"} src={icons.npm} alt="npm" title="npm" />

@@ -1,8 +1,9 @@
 import { Main as HomePage } from "./homePage/Main"
 import { Main as ItDevice } from "./itDevice/Main"
 // import { useState } from "react";
+import { motion } from "framer-motion"
 
-export const Top = (props:any)=> {
+export const Top = (props: any) => {
 
   // const [, setService] = useState("");
 
@@ -25,17 +26,25 @@ export const Top = (props:any)=> {
       <h3>価格</h3>
       <h3>速さ・柔軟性</h3> */}
 
-      {props.page == "itDevice" 
-      ?<ItDevice/>
-      :<></>
-      }
+      <motion.div
+        // initial="hidden"
+        initial="hidden"
+        animate="visible"
+        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+      >
+        {props.page === "itDevice"
+          ? <ItDevice />
+          : <></>
+        }
 
-      {props.page == "homePage"
-      ?<HomePage/>
-      :<></>
+        {props.page === "homePage"
+          ? <HomePage />
+          : <></>
 
-      }
-      
+        }
+      </motion.div>
+
+
 
 
 
@@ -44,7 +53,7 @@ export const Top = (props:any)=> {
       <h2>サービス内容</h2>
       <p>PC使用環境・内部設定代行</p>
       <p>ホームページ作成</p>
-      
+
 
 
 
