@@ -28,29 +28,40 @@ export const MailForm = () => {
 
     // const response = await fetch("https://api.sakura-eng.net", {
     // ↑2023/02/21削除代入いらない（？）
-    const response = await fetch("https://api.sakura-eng.net", {
+    await fetch("https://api.sakura-eng.net", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
       body: JSON.stringify({ mailerState }),
     })
-      .then((res: any) => {
-        res.json();
-        console.log("40行目")
-      })
-      .then(async (res) => {
-        console.log("43行目")
-        const resData: any = await res;
-        console.log(resData);
-        console.log("46行目")
-        // console.log(JSON.stringify({ mailerState }));
-        if (resData.status === "success") {
-          alert("メッセージが送信されました。");
-        } else if (resData.status === "fail") {
-          alert("現在メッセージの送信ができない状況でございます。お電話等をご利用ください。");
+      .then((response: any) => {
+
+        if (!response.ok) {
+          // console.error("41行めのエラー")
+          console.error('response.ok:', response.ok);
+          console.error('esponse.status:', response.status);
+          console.error('esponse.statusText:', response.statusText);
+          alert("送信に失敗しました。")
+          throw new Error(response.statusText);
         }
+
+        alert("メッセージの送信に成功しました")
+
+        response.json();
       })
+//        resDate.status が未定義だというエラーをcatchで指摘される。
+//       .then(async (response: any) => {
+//         let resData: any = await response;
+//         console.log("resData.status:", resData)
+// 
+//         if (resData.status === "success") {
+//           alert("メッセージが送信が成功しました。");
+// 
+//         } else if (resData.status === "fail") {
+//           alert("メッセージの送信に失敗しました。");
+//         }
+//       })
       .then(() => {
         setMailerState({
           type: "",
@@ -61,9 +72,9 @@ export const MailForm = () => {
           message: "",
         });
       })
-      .catch((error)=>{
-        alert("現在メッセージの送信ができない状況でございます。お電話等をご利用ください。");
-        console.log(error);
+      .catch((error) => {
+        alert("現在通信エラーが発生しております。");
+        console.error("通信に失敗しました。これはcatch内のエラー文です。", error);
       });
   };
 
@@ -102,8 +113,8 @@ export const MailForm = () => {
               required={true}
             >
               <option value="---こちらから選択してください---">---こちらから選択してください。---</option>
-              <option value="外構・水周りについて相談したい or 依頼したい">PCやIT周りについて相談したい or 整備を依頼したい</option>
-              <option value="面接について相談したい or 行ってほしい">お店のホームページについて相談したい or 依頼したい</option>
+              <option value="PCやIT周りについて相談したい or 整備を依頼したい">PCやIT周りについて相談したい or 整備を依頼したい</option>
+              <option value="お店のホームページについて相談したい or 依頼したい">お店のホームページについて相談したい or 依頼したい</option>
               <option value="迷っている・よくわからない">迷っている・よくわからない</option>
               <option value="その他">その他</option>
             </select>

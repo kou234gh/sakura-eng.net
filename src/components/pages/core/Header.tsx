@@ -30,14 +30,14 @@ export default function Header(props: any) {
             <button onClick={() => { setPageText("itDevice") }}
               className="p-2 px-4 rounded-full border-[1px] border-gray-400"
             >
-              PC整備
+              IT整備
             </button>
           </li>
           <li>
             <button onClick={() => { setPageText("homePage") }}
               className="p-2 px-4 rounded-full border-[1px] border-gray-400"
             >
-              HP制作
+              HP作成
             </button>
           </li>
           <li>
