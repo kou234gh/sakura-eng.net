@@ -20,7 +20,7 @@ export const Top = (props: any) => {
 
   return (
     <div className="w-full">
-      <h1>私たちについて</h1>
+      <h1>桜エンジニアリングについて</h1>
       <p>
         <span>私たちは千葉県柏市にて、</span>
         <span>お店やご家庭がデジタルの恩恵を</span>
@@ -33,9 +33,6 @@ export const Top = (props: any) => {
         <span>お店のHP制作を行います。</span>
         <span><br /></span>
       </p>
-      {/* <h2>特徴</h2>
-      <h3>価格</h3>
-      <h3>速さ・柔軟性</h3> */}
 
       <motion.div
         // initial="hidden"
