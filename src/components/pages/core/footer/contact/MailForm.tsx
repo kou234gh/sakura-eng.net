@@ -79,7 +79,7 @@ export const MailForm = () => {
   };
 
   return (
-    <div id="contact" className="w-full p-10 border border-black rounded-md">
+    <div id="contact" className="w-full md:w-2/3 p-5 md:p-10 border-slate-500 border-[1px] rounded-md">
       <h2>ご連絡</h2>
       <form onSubmit={submitEmail}>
         {/* <form action="fhuehfuehhu" method="POST"> */}
@@ -88,7 +88,7 @@ export const MailForm = () => {
           <label className="flex flex-col items-start">
             <span className="text-base p-2 font-normal">お問い合わせの種類<i className="text-[#c1121f]">（必須）</i></span>
             <select
-              className="text-sm h-auto w-full max-w-xs p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md"
+              className="text-sm h-10 w-full max-w-xs p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md"
               // placeholder=""
               onChange={handleStateChange}
               name="type"
@@ -105,7 +105,7 @@ export const MailForm = () => {
           <label className="flex flex-col items-start">
             <span className="text-base p-2 font-normal">ご希望のサービス<i className="text-[#c1121f]">（必須）</i></span>
             <select
-              className="text-sm h-auto w-full max-w-xs p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md"
+              className="text-sm h-10 w-full max-w-xs p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md"
               // placeholder=""
               onChange={handleStateChange}
               name="service"
@@ -124,7 +124,7 @@ export const MailForm = () => {
           <label className="flex flex-col items-start ">
             <span className="text-base p-2 font-normal">お名前 or 会社名<i className="text-[#c1121f]">（必須）</i></span>
             <input
-              className="w-full max-w-xs text-sm p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md"
+              className="w-full max-w-xs text-sm h-10 p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md"
               placeholder="例）山田 花子, 株式会社〇〇 山田太郎 "
               onChange={handleStateChange}
               name="name"
@@ -136,7 +136,7 @@ export const MailForm = () => {
           <label className="flex flex-col items-start">
             <span className="text-base p-2 font-normal">お電話番号<i className="text-[#c1121f]">（必須）</i></span>
             <input
-              className="text-sm h-auto  md:w-min p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md"
+              className="text-sm h-10  md:w-min p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md"
               placeholder="例）00-0000-0000"
               onChange={handleStateChange}
               name="tel"
@@ -148,7 +148,7 @@ export const MailForm = () => {
             {/* <span className="text-base p-2 font-normal">メールアドレス<i className="text-[#c1121f]">（任意）</i></span> */}
             <span className="text-base p-2 font-normal">メールアドレス</span>
             <input
-              className="text-sm h-auto  md:w-min p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md"
+              className="text-sm h-10  md:w-min p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md"
               placeholder="example@gmail.com"
               onChange={handleStateChange}
               name="email"

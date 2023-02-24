@@ -7,6 +7,17 @@ export const Top = (props: any) => {
 
   // const [, setService] = useState("");
 
+  const pageSelect = () => {
+
+    if (props.page === "homePage") {
+      return (<HomePage />);
+    } else if (props.page === "itDevice") {
+      return <ItDevice />;
+    }
+
+  }
+
+
   return (
     <div className="w-full">
       <h1>私たちについて</h1>
@@ -32,30 +43,12 @@ export const Top = (props: any) => {
         animate="visible"
         exit={{ opacity: 0, transition: { duration: 0.5 } }}
       >
-        {props.page === "itDevice"
-          ? <ItDevice />
-          : <></>
-        }
-
-        {props.page === "homePage"
-          ? <HomePage />
-          : <></>
-
-        }
+        {pageSelect()}
       </motion.div>
-
-
-
-
-
-
 
       <h2>サービス内容</h2>
       <p>PC使用環境・内部設定代行</p>
       <p>ホームページ作成</p>
-
-
-
 
     </div>
   )
