@@ -18,7 +18,7 @@ export const Apeal = () => {
             {examples.service}
           </th>
           {/* ２列目 */}
-          <td className="px-3 md:px-6 py-4 bg-red-300 text-slate-800 whitespace-nowrap text-right">
+          <td className="px-3 md:px-6 py-4 bg-yellow-100 text-slate-800 whitespace-nowrap text-right">
             {`${examples.prices[0]}円`}
           </td>
           {/* ３列目 */}
@@ -47,7 +47,7 @@ export const Apeal = () => {
               <th scope="col" className="px-3 md:px-6 py-3 border-b-[1px] border-slate-800 bg-gray-50 ">
                 サービス
               </th>
-              <th scope="col" className="px-3 md:px-6 py-3 border-b-[1px] border-slate-800 bg-red-300 text-center">
+              <th scope="col" className="px-3 md:px-6 py-3 border-b-[1px] border-slate-800 bg-yellow-200 text-center">
                 私たち
               </th>
               <th scope="col" className="px-3 md:px-6 py-3 border-b-[1px] border-slate-800 bg-inherit text-center">
@@ -63,6 +63,9 @@ export const Apeal = () => {
           </tbody>
         </table>
       </div>
+
+      
+
     </div>
   )
 }
